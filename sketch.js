@@ -65,7 +65,11 @@ function draw() {
 
 function keyPressed() {
  if (keyCode === DOWN_ARROW) {
-	Matter.body.setStatic(packageBody,fasle);
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:3, isStatic:false});
+	World.add(world, packageBody);
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:3, isStatic:false});
+	World.add(world, packageBody);
+	
   }
 }
 
